@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 50px 10%;
+  background-color: #24202f;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.active {
+  display: none;
+}
+
+#searchBar {
+  width: 40%;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 2px gray;
+  color: #24202f;
+}
+
+#searchBar:focus {
+  background-color: rgb(209, 207, 207);
+  color: black;
+}
+
+.fa-times {
+  margin-left: 10px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 30px;
+  width: 100%;
+  min-height: 75vh;
+}
+.movieContainer {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movieCard {
+  width: 280px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.posterBox {
+  border-radius: 10px;
+  aspect-ratio: 2/3;
+  transition: all;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.posterBox:hover {
+  transform: scale(1.05);
+}
+
+.posterBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.desBox {
+  width: 100%;
+  height: 35%;
+  padding: 10px;
+}
+
+.titleAndRatingBox {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.rating {
+  font-weight: 800;
+  color: rgb(226, 164, 6);
+}
+
+.overviewTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(82, 76, 76);
+}
+
+.overviewContent {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+
+footer {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(152, 148, 148);
+  margin-top: 30px;
+}
+
+.showMore,
+.showLess {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    padding: 50px 5%;
+  }
+
+  #searchBar {
+    width: 100%;
+  }
+
+  .movieCard {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: white;
+    border: 2px solid gray;
+  }
+}
